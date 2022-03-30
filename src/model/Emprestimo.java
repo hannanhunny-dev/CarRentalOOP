@@ -1,24 +1,23 @@
 package model;
 
-import java.util.Date;
 
 public class Emprestimo {
 	
-	private Date date;
+	private String date;
 	private  Endereco endereco;
 	private double alguel;
 	
 	public Emprestimo() {}
-	public Emprestimo(Date date,Endereco endereco, double alguel) {
+	public Emprestimo(String date,Endereco endereco, double alguel) {
 		this.date = date;
 		this.endereco = endereco;
 		this.alguel = alguel;
 		
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public Endereco getEndereco() {
@@ -35,12 +34,6 @@ public class Emprestimo {
 	}
 	
 	
-	public void localdeDevolver() {          
-		//null
-	}
 	
-	public void localderetirada() {
-		//null
-	}
 
 }

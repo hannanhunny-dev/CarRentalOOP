@@ -23,7 +23,7 @@ public class Client extends Pessoa {
 	}
 	
 
-	}
+	
 	
 	
 	

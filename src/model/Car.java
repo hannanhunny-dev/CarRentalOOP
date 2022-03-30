@@ -70,5 +70,16 @@ public class Car {
     public void cadastrar() {
     	//
     }
+    public String toString() {
+        return "Car: "+ "\n"+
+        		"marca :  "+ getMarca() + "\n"+
+	             "\n"+
+	            "Cor  :  " + getCor() + "\n"
+	            +"\n"+
+	            "Ano de Facricacoa :  "+ getAnoDeFabricacao() +"\n"
+	            +"\n"+
+	          "Disponibilidade  :  "  + isDisponivel() + "\n";
+	            
+    }
   
 }
