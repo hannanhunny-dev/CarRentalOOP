@@ -17,6 +17,13 @@ public abstract class Pessoa {
 		this.email = email;
 		this.senha = senha;
 	}
+	
+	protected Pessoa(String nome, String cpf,String dataDeNascimento) {
+		this.nome = nome;
+		this.dataDeNascimento = dataDeNascimento;
+		this.cpf = cpf;
+		
+	}
 
 	protected Pessoa(String nome, String senha) { // constructor no caso se apenas novo usario e feito por apenas nome e senha
 		this.nome = nome;

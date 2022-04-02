@@ -1,4 +1,5 @@
 package model;
+import view.AlugarCarro;
 import view.CadastrarAdmin;
 import view.CadastrarCarro;
 import view.CadastrarClient;
@@ -46,5 +47,7 @@ public class Main {
 	//System.out.print(getIndexOfContaLogado() );
 	//	new VisualizarCarro().setVisible(true);
 		// new EditarEDeletarCarro().setVisible(true);
+		
+	new AlugarCarro().setVisible(true);
 }
 }
