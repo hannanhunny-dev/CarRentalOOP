@@ -2,6 +2,7 @@ package control;
 
 import java.awt.event.ActionEvent;
 
+import view.AlugarCarro;
 import view.EditarContaClient;
 import view.Login;
 import view.MenuClient;
@@ -24,7 +25,7 @@ public class MenuControlClient {
             new Login().setVisible(true);
             this.view.dispose();
         } else if (botao == view.getVisualizarCarrosBtn()) {
-           //   new EditarContaClient().setVisible(true);
+          new AlugarCarro().setVisible(true);
             this.view.dispose();
         } else if (botao == view.getMinhaContaBtn()) {
             new EditarContaClient().setVisible(true);

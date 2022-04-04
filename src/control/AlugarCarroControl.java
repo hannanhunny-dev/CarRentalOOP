@@ -5,21 +5,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JLabel;
 
 import model.Car;
 import model.Dados;
+import view.AdcionarPagamento;
 import view.AlugarCarro;
 
 public class AlugarCarroControl {
 	
+	
 	private AlugarCarro view;
+;
 
 	public AlugarCarroControl(AlugarCarro view){
 		this.view = view;
 	}
 	
 	
-	
+	int dinheiro = 555;
 	
 
 	public void executarBotao(ActionEvent e) {
@@ -32,7 +36,8 @@ public class AlugarCarroControl {
             
 			
 		}else if (botao == view.getProximo()) {
-			
+			new AdcionarPagamento(dinheiro).setVisible(true);
+			this.view.dispose();
 		}
 		
 	}
@@ -101,6 +106,8 @@ public class AlugarCarroControl {
 	        return modelo.toArray(new String[0]);
 	    }
 	
+	    
+	    
 	
 	
 	

@@ -31,6 +31,7 @@ public class AlugarCarro extends JFrame implements ActionListener{
 	private Car car;
 	
 	
+	
 	public AlugarCarro() {
 		controller = new AlugarCarroControl(this);
 		car = new Car("","","","",false);

@@ -1,4 +1,5 @@
 package model;
+import view.AdcionarPagamento;
 import view.AlugarCarro;
 import view.CadastrarAdmin;
 import view.CadastrarCarro;
@@ -48,6 +49,9 @@ public class Main {
 	//	new VisualizarCarro().setVisible(true);
 		// new EditarEDeletarCarro().setVisible(true);
 		
-	new AlugarCarro().setVisible(true);
+	//new AlugarCarro().setVisible(true);
+		
+		
+	//	new AdcionarPagamento().setVisible(true);
 }
 }

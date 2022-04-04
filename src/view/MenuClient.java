@@ -31,7 +31,7 @@ public class MenuClient extends JFrame implements ActionListener{
 
 		setResizable(false);
 	
-		setTitle("Cinema");
+		setTitle("ALugar Carro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 452, 409);
 
