@@ -37,7 +37,7 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 	
 	
 	
-	public AdcionarPagamento(int dinheiro) {
+	public AdcionarPagamento(int dinheiro,int text2int) {
 	//	controller = new PagamentoControl(this);
 		
 		
@@ -107,8 +107,8 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 		
 		
 		checkout = new JLabel();
-checkout.setText("Checkout : Total "+dinheiro);
-		checkout.setFont(new Font(COLO_STRING, Font.PLAIN, 25));
+        checkout.setText("Checkout : Total : "+dinheiro +"* qtd dias ="+dinheiro*text2int);
+		checkout.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
 		checkout.setBounds(10, 10, 400, 21);
 		contentPane.add(checkout);
 	

@@ -6,8 +6,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import control.AlugarCarroControl;
@@ -28,7 +31,11 @@ public class AlugarCarro extends JFrame implements ActionListener{
 	private final JButton next;
 	private final JButton voltarBtn;
 	private final AlugarCarroControl controller;
-	private Car car;
+	private  Car car;
+	private final JTextField qtdsDiasFeild;
+	private JLabel preco;
+	private JLabel qtdsDiaslabel;
+	
 	
 	
 	
@@ -82,7 +89,27 @@ public class AlugarCarro extends JFrame implements ActionListener{
 
 		setLocationRelativeTo(null);
 		
+
+		qtdsDiasFeild = new JTextField();
+		qtdsDiasFeild.setBounds(250, 300, 150, 30);
+		qtdsDiasFeild.setColumns(10);
+		contentPane.add(qtdsDiasFeild);
 		
+		
+//		preco = new JLabel();
+//		preco.setText("Preco:  "+ controller.getDinheiro() );
+//		preco.setHorizontalAlignment(SwingConstants.CENTER);
+//		preco.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+//		preco.setBounds(10, 300, 154, 14);
+//		preco.setVisible(false);
+//		contentPane.add(preco);
+		
+		
+		qtdsDiaslabel = new JLabel("Escreva dias para alugar");
+		qtdsDiaslabel.setHorizontalAlignment(SwingConstants.CENTER);
+		qtdsDiaslabel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		qtdsDiaslabel.setBounds(10, 300, 200, 30);
+		contentPane.add(qtdsDiaslabel);
 		
 		
 		
@@ -90,9 +117,13 @@ public class AlugarCarro extends JFrame implements ActionListener{
 	}
 	
 	
+	public JTextField getQtdsDiasFeild() {
+		return qtdsDiasFeild;
+	}
 	
-	
-	
+	public JLabel getpreco() {
+		return preco;
+	}
 	
 	
 

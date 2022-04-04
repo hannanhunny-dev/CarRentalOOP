@@ -3,6 +3,7 @@ package control;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JLabel;
@@ -16,14 +17,13 @@ public class AlugarCarroControl {
 	
 	
 	private AlugarCarro view;
-;
+	 private int text2int;
 
 	public AlugarCarroControl(AlugarCarro view){
 		this.view = view;
 	}
 	
 	
-	int dinheiro = 555;
 	
 
 	public void executarBotao(ActionEvent e) {
@@ -36,7 +36,11 @@ public class AlugarCarroControl {
             
 			
 		}else if (botao == view.getProximo()) {
-			new AdcionarPagamento(dinheiro).setVisible(true);
+			
+		           
+			text2int = Integer.parseInt(view.getQtdsDiasFeild().getText());    
+		      
+			new AdcionarPagamento(dinheiro,text2int).setVisible(true);
 			this.view.dispose();
 		}
 		
@@ -82,11 +86,12 @@ public class AlugarCarroControl {
 	    public void checkAvailability() {
 	    	if(buscarCarEscolhidoDisponivel((String)view.getSelecionarCarro().getSelectedItem()) == true){
 	    		view.getProximo().setVisible(true);
+	    		//view.getpreco().setVisible(true);
 	    	}else {
 	    		view.getProximo().setVisible(false);
+	    		//view.getpreco().setVisible(false);
 	    	}
 	    }
-	    
 	    
 	    
 	    //
@@ -105,11 +110,22 @@ public class AlugarCarroControl {
 
 	        return modelo.toArray(new String[0]);
 	    }
-	
-	    
-	    
-	
-	
-	
+
+    Random random = new Random();
+   private int dinheiro = 100 + random.nextInt(200);
+   
+   public int getDinheiro() {
+	   return dinheiro;
+   }
+   
+   
+   
+   
+  //  private int text2int = Integer.parseInt(view.getQtdsDiasFeild().getText());
+
+	 public int getText2int() {
+		 return text2int;
+	 }
 
 }
+
