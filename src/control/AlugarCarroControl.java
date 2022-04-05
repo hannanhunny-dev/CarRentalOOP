@@ -12,6 +12,7 @@ import model.Car;
 import model.Dados;
 import view.AdcionarPagamento;
 import view.AlugarCarro;
+import view.EmprestimoView;
 
 public class AlugarCarroControl {
 	
@@ -40,7 +41,8 @@ public class AlugarCarroControl {
 		           
 			text2int = Integer.parseInt(view.getQtdsDiasFeild().getText());    
 		      
-			new AdcionarPagamento(dinheiro,text2int).setVisible(true);
+		//	new AdcionarPagamento(dinheiro,text2int).setVisible(true);
+			new EmprestimoView(dinheiro,text2int).setVisible(true);
 			this.view.dispose();
 		}
 		

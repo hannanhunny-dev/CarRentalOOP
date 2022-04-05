@@ -5,13 +5,15 @@ public class Emprestimo {
 	
 	private String date;
 	private  Endereco endereco;
-	private double alguel;
+	private int alguel;
+	private boolean EntregarOuDevolver;
 	
 	public Emprestimo() {}
-	public Emprestimo(String date,Endereco endereco, double alguel) {
+	public Emprestimo(String date,Endereco endereco, int alguel,boolean EntregarOuDevolver) {
 		this.date = date;
 		this.endereco = endereco;
 		this.alguel = alguel;
+		this.EntregarOuDevolver =EntregarOuDevolver;
 		
 	}
 	public String getDate() {
@@ -26,13 +28,20 @@ public class Emprestimo {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	public double getAlguel() {
+	public int getAlguel() {
 		return alguel;
 	}
-	public void setAlguel(double alguel) {
+	public void setAlguel(int alguel) {
 		this.alguel = alguel;
 	}
+	public boolean isEntregarOuDevolver() {
+		return EntregarOuDevolver;
+	}
+	public void setEntregarOuDevolver(boolean entregarOuDevolver) {
+		EntregarOuDevolver = entregarOuDevolver;
+	}
 	
+
 	
 	
 

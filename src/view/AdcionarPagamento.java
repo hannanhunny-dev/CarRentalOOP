@@ -11,9 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 
-
-import control.PagamentoControl;
-
+import control.AdcionarPagamentoControl;
 public class AdcionarPagamento extends JFrame implements ActionListener {
 
 	
@@ -29,16 +27,17 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 	private JPanel contentPane; 
 	private final JButton pagarBtn;
 	
-	private final JLabel checkout;
+//	private final JLabel checkout;
 	
 	private static final String COLO_STRING = "Open Sans";
 
-	//private PagamentoControl controller;
+	private AdcionarPagamentoControl controller;
 	
+	// int dinehrio;
+	// int text2int;
 	
-	
-	public AdcionarPagamento(int dinheiro,int text2int) {
-	//	controller = new PagamentoControl(this);
+	public AdcionarPagamento() {
+		controller = new AdcionarPagamentoControl(this);
 		
 		
 		setResizable(false);
@@ -106,27 +105,52 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 		contentPane.add(pagarBtn);
 		
 		
-		checkout = new JLabel();
-        checkout.setText("Checkout : Total : "+dinheiro +"* qtd dias ="+dinheiro*text2int);
-		checkout.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
-		checkout.setBounds(10, 10, 400, 21);
-		contentPane.add(checkout);
+//		checkout = new JLabel("finalizar Pedido");
+//   //     checkout.setText("Checkout : Total : "+dinheiro +" x qtd dias ="+dinheiro*text2int);
+//		checkout.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
+//		checkout.setBounds(10, 10, 400, 21);
+//		contentPane.add(checkout);
+	
 	
 		
-
 		
-		
-		
-		
-		
-		
-		
-		
+	}
+	  public JTextField  getnomeImpressoFeild() {
+		  return nomeImpressoFeild;
+	  }
+	  public JTextField  getdataDevalidacaoFeild(){
+		 return dataDevalidacaoFeild;
+	  }
+	  public JTextField  getcodigoDeSegurancaFeild(){
+		  return codigoDeSegurancaFeild ;
+	  }
+	  public JTextField  getnomeroDoCartaoFeild(){
+		  return nomeroDoCartaoFeild ;
+	  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public JButton getpagarBtn() {
+		return pagarBtn;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		this.controller.executarBotao(e);
 	}
 }

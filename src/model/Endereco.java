@@ -7,10 +7,27 @@ public class Endereco {
 	private String  cidade;
 	private String estado;
 	private String  pontodeReferencia;
+	private String endereco;
 	
 	
-	
-	
+	public Endereco(String endereco,String estado,String cidade,String logradouro,String complemento,String  pontodeReferencia,String cep) {
+		this.endereco=endereco;
+		this.estado=estado;
+	    this.cidade=cidade;
+	    this.logradouro=logradouro;
+	    this.complemento=complemento;
+	    this.pontodeReferencia=pontodeReferencia;
+	    this.cep=cep;
+	}
+	public Endereco() {
+		
+	}
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
 	public String getLogradouro() {
 		return logradouro;
 	}

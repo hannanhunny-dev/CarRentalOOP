@@ -6,6 +6,7 @@ import view.CadastrarCarro;
 import view.CadastrarClient;
 import view.EditarContaClient;
 import view.EditarEDeletarCarro;
+import view.EmprestimoView;
 import view.Login;
 import view.MenuAdmin;
 import view.VisualizarCarro;
@@ -49,9 +50,13 @@ public class Main {
 	//	new VisualizarCarro().setVisible(true);
 		// new EditarEDeletarCarro().setVisible(true);
 		
-	new AlugarCarro().setVisible(true);
+	//new AlugarCarro().setVisible(true);
 		
 		
 	//	new AdcionarPagamento().setVisible(true);
+		
+	//	new EmprestimoView().setVisible(true);
+	
+	
 }
 }
