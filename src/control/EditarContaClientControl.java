@@ -10,14 +10,12 @@ import control.LoginControl;
 public class EditarContaClientControl  {
 	  private EditarContaClient view;
 	  private LoginControl login;
-	//  private int a = Dados.getIndexOfContaLogado();
 	  
 	public EditarContaClientControl(EditarContaClient view ) {
 	        this.view = view;
 	    }
 	
 	
-	//public static int a = Dados.getIndexOfContaLogado(); 
 	
 	
 	
@@ -39,11 +37,11 @@ public class EditarContaClientControl  {
            Dados.getClientes().get(view.getA()).setSenha(password);
 
            this.view.mensagemConfirmarCadastro("Editar as informações do Cliente foi um sucesso!");
-          // new MinhaConta().setVisible(true);
            this.view.dispose();
            } 
 	   else if ( botao == view.getVoltarBtn() ){
         	   new MenuClient().setVisible(true);
+        	   
            }
 }
 	  

@@ -2,6 +2,7 @@ package control;
 
 import java.awt.event.ActionEvent;
 
+import model.Dados;
 import view.AlugarCarro;
 import view.EditarContaClient;
 import view.Login;
@@ -31,7 +32,12 @@ public class MenuControlClient {
             new EditarContaClient().setVisible(true);
             this.view.dispose();
         }else if (botao == view.getAdcionarCnh()) {
-        	view.mensagemCNH("infelizmente adcionar CNH pelo app nao esta disponivel mostre CNH no local de retira do carro");
+        	view.mensagemCNH("infelizmente adcionar CNH pelo app nao esta disponivel no momento! mostre CNH no local de retirada do carro porfavor");
+        }else if (botao== view.getDeletarMinhacontaBtn()) {
+        	Dados.getClientes().remove(Dados.getIndexOfContaLogado());
+        	view.mensagemCNH("conta deletado com sucesso!");
+        	this.view.dispose();
+        	new Login().setVisible(true);
         }
     }
 

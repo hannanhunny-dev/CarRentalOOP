@@ -38,6 +38,8 @@ public class MenuControlAdmin {
 			this.view.dispose();
 		} else if (botao == view.getMinhaContaBtn()) {
 			view.indisponivel(" indisponivel no momento");
+		}else if (botao== view.getDeletarCarrosBtn()) {
+			view.indisponivel(" indisponivel no momento");
 		}
 	}
 

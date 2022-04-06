@@ -9,6 +9,7 @@ import model.Client;
 import model.Dados;
 import view.CadastrarAdmin;
 import view.LoginAdmin;
+import view.MenuAdmin;
 
 
 public class CadastrarAdminControl {
@@ -41,7 +42,7 @@ public class CadastrarAdminControl {
             new LoginAdmin().setVisible(true);
         } else {
             this.view.dispose();
-            new LoginAdmin().setVisible(true);
+            new MenuAdmin().setVisible(true);
         }
     }
 	
