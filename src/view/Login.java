@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 import control.LoginControl;
-import control.LoginControlAdmin;
+
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -28,7 +28,10 @@ public  class Login extends JFrame implements ActionListener{
     private final JButton registerBtn;
     private final LoginControl controller;
     private final JButton adminBtn;
-    private static final String COLO_STRING = "Open Sans";
+  /* classe herda JFrame e implementar actionlsiitoner
+   * classe responsavel pelo tela do login cliente
+   * tem tres botoes login ,registrar nova conta e login do admin
+   */
 
 
 
@@ -43,7 +46,7 @@ public  class Login extends JFrame implements ActionListener{
 
 		usernameJLabel = new JLabel("Usuario");
 		usernameJLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		usernameJLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 30));
+		usernameJLabel.setFont(new Font(null, Font.PLAIN, 30));
 		usernameJLabel.setBounds(10, 83, 143, 25);
 		getContentPane().add(usernameJLabel);
 
@@ -53,7 +56,7 @@ public  class Login extends JFrame implements ActionListener{
 
 		passwrodJLabel = new JLabel("Senha");
 		passwrodJLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		passwrodJLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 30));
+		passwrodJLabel.setFont(new Font(null, Font.PLAIN, 30));
 		passwrodJLabel.setBounds(10, 119, 143, 25);
 		getContentPane().add(passwrodJLabel);
 
@@ -62,19 +65,19 @@ public  class Login extends JFrame implements ActionListener{
 		getContentPane().add(password);
 
 		loginBtn = new JButton("Entrar");
-		loginBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
+		loginBtn.setFont(new Font(null, Font.PLAIN, 20));
 		loginBtn.setBounds(69, 172, 155, 50);
 		loginBtn.addActionListener(this);
 		getContentPane().add(loginBtn);
 
 		registerBtn = new JButton("Registrar-se");
-		registerBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
+		registerBtn.setFont(new Font(null, Font.PLAIN, 20));
 		registerBtn.setBounds(215, 172, 155, 50);
 		registerBtn.addActionListener(this);
 		getContentPane().add(registerBtn);
 		
 		adminBtn = new JButton("Login-Admin");
-		adminBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
+		adminBtn.setFont(new Font(null, Font.PLAIN, 20));
 		adminBtn.setBounds(215, 12, 150, 40);
 		adminBtn.addActionListener(this);
 		getContentPane().add(adminBtn);
@@ -86,7 +89,11 @@ public  class Login extends JFrame implements ActionListener{
     
     
 
-    
+    /**
+     * Executa metodo executarBotao em Logincontrol quando botao e clicado.
+     * 
+     * Implementação da interface ActionListener.
+     */
  
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -94,6 +101,10 @@ public  class Login extends JFrame implements ActionListener{
         this.controller.executarBotao(e);
         
     }
+    
+    /*
+     * Joptionpane para mostra em mesagem de erro no caso senha invalido
+     */
 
     public void mostrarMensagemLoginInvalido(String mensagem) {
         JOptionPane.showMessageDialog(null, mensagem, null, JOptionPane.ERROR_MESSAGE);

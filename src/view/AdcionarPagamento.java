@@ -28,14 +28,23 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 	private JPanel contentPane; 
 	private final JButton pagarBtn;
 	
-//	private final JLabel checkout;
+
+	/**
+	 * Tela responsável para o cadastro de pagamento.
+	 
+
+	 * JPanel também cria diversos JLabels para inserir os dados e cadastrar
+	 * o Pagamento. Além disso, também apresenta três botões, são eles:
+	 * 		(1) -> depois adcionar dados de Eemprestimo sistema leva o usario para fzr pagamento pelo app cartao de credito
+	 * 		(3) -> botão Confirmar: retorna uma mensagem confirmando 
+
+ */
 	
 	private static final String COLO_STRING = "Open Sans";
 
 	private AdcionarPagamentoControl controller;
 	
-	// int dinehrio;
-	// int text2int;
+
 	
 	public AdcionarPagamento() {
 		controller = new AdcionarPagamentoControl(this);
@@ -106,17 +115,17 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 		contentPane.add(pagarBtn);
 		
 		
-//		checkout = new JLabel("finalizar Pedido");
-//   //     checkout.setText("Checkout : Total : "+dinheiro +" x qtd dias ="+dinheiro*text2int);
-//		checkout.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
-//		checkout.setBounds(10, 10, 400, 21);
-//		contentPane.add(checkout);
-	
+
 	
 		this.setLocationRelativeTo(null);
 		
 	}
-	
+	/**
+	 * Retorna um JOptionPane quando usuario clicar em confirmar pagamento.
+	 * 
+	 * @param mensagem Mensagem confirmando que o método de pagamento
+	 * foi adicionado. e obrigaod pelo usar nosso servico.
+	 */
 	
 	public void ObrigadoMesagen(String mensagem) {
 		JOptionPane.showMessageDialog(null, mensagem);
@@ -153,7 +162,7 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 	public JButton getpagarBtn() {
 		return pagarBtn;
 	}
-
+//
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub

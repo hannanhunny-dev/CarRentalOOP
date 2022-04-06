@@ -13,6 +13,8 @@ import view.MenuAdmin;
 public class CadastrarCarroControl {
 	
 	private boolean a;
+	//classe responsavel pelo logica atras do view CadastrarCArro
+	
 
 	private final CadastrarCarro view;
 	//private CadastrarCarro view;
@@ -20,7 +22,9 @@ public class CadastrarCarroControl {
 	public CadastrarCarroControl(CadastrarCarro view) {
        this.view = view;
     }
-
+/*
+ * metodo cadastrar carro que vai cadastrar novo carro em dados.cars
+ */
 	 public void cadastrarCarro() {
 
 	        String marca = view.getMarcaFeild().getText();
@@ -37,7 +41,10 @@ public class CadastrarCarroControl {
 	        Dados.getCars().add(new Car(marca, cor, modelo, anoDeFabricacao, a));
 	        System.out.print(a);
 	    }
-	 
+	/*
+	 *  getAdcionarCarroBtn vai correr metodo cadastrarCarro que vai salvar o car em arraylist e vai levar para menuadmin
+	 *  se usuario clicar me voltar vai levar para menuadmin
+	 */
 	  public void executarBotao(ActionEvent e) {
 	        JButton botao = (JButton) e.getSource();
 	       

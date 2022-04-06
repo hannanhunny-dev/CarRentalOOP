@@ -17,11 +17,13 @@ import control.LoginControlAdmin;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import control.LoginControlAdmin;
+
 
 
 
 public class  LoginAdmin extends JFrame implements ActionListener {
+	
+	
 	
 	
 	private final JLabel usernameJLabel;
@@ -34,7 +36,14 @@ public class  LoginAdmin extends JFrame implements ActionListener {
 	private final JButton clientBtn;
 	private static final String COLO_STRING = "Open Sans";
 	
+	 /* classe herda JFrame e implementar actionlsiitoner
+	   * classe responsavel pelo tela do login Admin
+	   * tem dois botoes login ,ou mudar para login do cliente
+	   */
 	
+	
+	
+	//contructor para jframe LoginAdmin
 	public LoginAdmin() {
 		controller = new LoginControlAdmin(this);
 		this.setSize(425, 340);
@@ -78,12 +87,24 @@ public class  LoginAdmin extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
 		
 	}
+	
+	
+	
+
+    /**
+     * Executa metodo executarBotao em LogincontrolAdmin quando botao e clicado.
+     * 
+     * Implementação da interface ActionListener.
+     */
+ 
 
 	   public void actionPerformed(ActionEvent e) {
 	        
 	        this.controller.executarBotao(e);
 	        
 	    }
+	   
+	   
 	   
 	   
 	   

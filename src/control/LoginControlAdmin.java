@@ -15,7 +15,10 @@ import view.Login;
 
 
 public class LoginControlAdmin {
-	
+
+/*Classe controller para view LoginAdmin
+ * tem todos os metodos necessarios para fzr comunicacao entre Modelo de dados e view.LoginAdmin
+ */
 	
 	private final LoginAdmin view;
 
@@ -25,7 +28,11 @@ public class LoginControlAdmin {
         this.view = view;
     }
     
-    
+  /*  metodo que vai capturar evento 
+    * 1-botao == view.getLoginBtn() , vai executar metodo validadarUser
+    * 2-botao == view.getClientbtn() , vai inicaiar novo tela jframe para login do admin
+    * 
+    */
     public void executarBotao(ActionEvent e) {
         JButton botao = (JButton) e.getSource();
 
@@ -33,12 +40,13 @@ public class LoginControlAdmin {
             validadarUser();
         } else if(botao == view.getClientBtn()) {
         	new Login().setVisible(true);
+        	this.view.dispose();
         	
         }
          
     }
     
-    
+    //meteodo que vai fzr validacao do admin
     
     public void validadarUser() {
     	
@@ -59,7 +67,7 @@ public class LoginControlAdmin {
       
         
     }
- 
+
     
     public Admin obterAdmin(){
     	 String name = view.getUsername().getText();

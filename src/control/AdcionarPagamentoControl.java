@@ -12,7 +12,10 @@ public class AdcionarPagamentoControl {
 	
 	
 	private AdcionarPagamento view;
-
+	/*
+	 * classe responsavel pelo logica atras do view AdcionarPagamento
+	 */
+	//@param view A tela de AdcionarPagamento
 	public AdcionarPagamentoControl(AdcionarPagamento view){
 		this.view =view;
 	}
@@ -33,7 +36,7 @@ public class AdcionarPagamentoControl {
 	}
 	
 	
-	
+	//meteodo que vao salva pagamento em dados arraylist
 	public void salvaPagmento() {
 		
 		String nomeroDoCartao = view.getnomeroDoCartaoFeild().getText();

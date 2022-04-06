@@ -17,14 +17,18 @@ import view.MenuClient;
 
 public class AlugarCarroControl {
 	
-	
+	//classe responsavel pelo logica atras do view AlugarCarro
 	private AlugarCarro view;
 	 private int text2int;
 
 	public AlugarCarroControl(AlugarCarro view){
 		this.view = view;
 	}
-	
+	/*
+	 * se usaurio clicar em butao ok sistema vai mostra detalhes do carro selecionado em combobox
+	 * se carro fosse disponivel esta disponivel, o sistema vai visibilizar button para comprar carro
+	 * @param no caso usaurio selecionar carro sistema vai levar para novo tela com EmprestimoView com de dinheiro e dias para que usaurio esta querendo
+	 */
 	
 	
 
@@ -41,9 +45,7 @@ public class AlugarCarroControl {
 			
 		           
 			text2int = Integer.parseInt(view.getQtdsDiasFeild().getText());    
-		      
-		//	new AdcionarPagamento(dinheiro,text2int).setVisible(true);
-			new EmprestimoView(dinheiro,text2int).setVisible(true);
+		    new EmprestimoView(dinheiro,text2int).setVisible(true);
 			this.view.dispose();
 		}else if (botao== view.getVoltarBtn()) {
 			new MenuClient().setVisible(true);
@@ -53,7 +55,7 @@ public class AlugarCarroControl {
 	}
 	
 	
-	
+	//boolean para verificao de dados em dados.getcar
 	
 	  private boolean saoIguais(String marca) {
 	        for (Car c : Dados.getCars()) {
@@ -66,7 +68,7 @@ public class AlugarCarroControl {
 	    }
 	    
 	    
-	    //
+	    //se o carro fosse escolhido vai devolver o informacoes salvados nos dados
 	    public Car buscarCarEscolhido(String name) {
 	        for (Car c : Dados.getCars()) {
 	            if (c.getMarca().equals(name)) {
@@ -77,7 +79,7 @@ public class AlugarCarroControl {
 	        return null;
 	    }
 	    
-	    
+	    //metodo vai verficao de se carro esta disponivel para alugamento
 	    public boolean buscarCarEscolhidoDisponivel(String name) {
 	        for (Car c : Dados.getCars()) {
 	            if (c.getMarca().equals(name)) {
@@ -89,19 +91,21 @@ public class AlugarCarroControl {
 	       
 	    }
 	    
+	    
+	    //metodo que ta usando metodo buscarCarEscolhidoDisponivel dentro dele para verificao se carro esta disponivel
 	    public void checkAvailability() {
 	    	if(buscarCarEscolhidoDisponivel((String)view.getSelecionarCarro().getSelectedItem()) == true){
 	    		view.getProximo().setVisible(true);
-	    		//view.getpreco().setVisible(true);
+	    		
 	    	}else {
 	    		view.getProximo().setVisible(false);
-	    		//view.getpreco().setVisible(false);
+	    	
 	    	}
 	    }
 	    
 	    
 	    //
-	    
+	    // marca em objeto car do arraylist para array e depois esse array para combobox 
 	    public DefaultComboBoxModel<String> atualizarCar() {
 	        return new DefaultComboBoxModel<>(arraysCar());
 	    }
@@ -116,7 +120,7 @@ public class AlugarCarroControl {
 
 	        return modelo.toArray(new String[0]);
 	    }
-
+// usando random para gerar preco random do carro
     Random random = new Random();
    private int dinheiro = 100 + random.nextInt(200);
    

@@ -10,15 +10,18 @@ import view.MenuAdmin;
 import view.VisualizarCarro;
 
 
+/*Classe controller para view MenuAdmin
+ * 
+ */
 public class MenuControlAdmin {
 
 	private final MenuAdmin view;
 
 	public MenuControlAdmin(MenuAdmin view) {
-	//	super();
+	
 		this.view = view;
 	}
-
+// esse view  tem butoes para acoes diferentes entao para  certo tipo de evento vai visibilizar novo telas. 
 	public void executarBotao(ActionEvent e) {
 		Object botao = e.getSource();
 

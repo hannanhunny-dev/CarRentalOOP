@@ -58,18 +58,6 @@ public class Car {
 	
 	
 	
-	public void buscar() {
-		//
-	}
-	public void editar() {
-		//
-	}
-	public void deletar() {
-		//
-	}
-    public void cadastrar() {
-    	//
-    }
     public String toString() {
         return "Car: "+ "\n"+
         		"marca :  "+ getMarca() + "\n"+

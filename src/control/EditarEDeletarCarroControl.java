@@ -13,7 +13,8 @@ import view.MenuAdmin;
 
 public class EditarEDeletarCarroControl {
 	
-	
+	//classe responsavel pelo logica atras do view EditarEDeletarCarro
+
 	
 	private final EditarEDeletarCarro view;
 	private String b;
@@ -23,7 +24,11 @@ public class EditarEDeletarCarroControl {
         this.view = view;
     }
 
-   //
+   /*esse controller tem metodos que vao  pegar Marca do carro para mostrar em combobox no caso selecionado eles vao mostra objeto carro daquele marca 
+    * assim admin pode fzr operacoes crud nos carros.
+    * 
+    * 
+    */
     public void executaBotao(Object botao) {
     	
     	if (botao == view.getExcluirBtn()) {
@@ -31,13 +36,13 @@ public class EditarEDeletarCarroControl {
     		 this.view.dispose();
     		 new EditarEDeletarCarro().setVisible(true);
     		 
-            // this.view.dispose();
+            
     	}else if (botao == view.getMostraBtn()) {
     		view.getInformacoesTable().setText(((this.buscarCarEscolhido((String)view.getBuscarCarroComboBox().getSelectedItem())).toString()));
             view.getInformacoesTable().updateUI();
     		
     	}else if (botao == view.getEditarBtn()) {
-    	//	b = (String) view.getBuscarCarroComboBox().getSelectedItem();
+    	
     		EditarInformacoesCar();
     	    buscarCarEscolhidoIndex(b);
     	} else if (botao == view.getConfirmarBtn() ) {
@@ -52,7 +57,7 @@ public class EditarEDeletarCarroControl {
         
     }	
 
-    //
+    // metodo que pegar o marca do carro e vai exculir aquele carro
     
     public boolean excluirCarro(String name) {
         for (Car c : Dados.getCars()) {
@@ -66,7 +71,7 @@ public class EditarEDeletarCarroControl {
         return false;
     }
     
-    //
+    //metodo boolean que vai fzr compracao entres string marca e car.getmarca() para ver se tem em dados
     private boolean saoIguais(String marca) {
         for (Car c : Dados.getCars()) {
             if (c.getMarca().equals(marca)) {
@@ -78,7 +83,7 @@ public class EditarEDeletarCarroControl {
     }
     
     
-    //
+    //metodo que pegar string do combobox e vai tentar achar aquele carro dentro dos dadaos
     public Car buscarCarEscolhido(String name) {
         for (Car c : Dados.getCars()) {
             if (c.getMarca().equals(name)) {
@@ -91,12 +96,12 @@ public class EditarEDeletarCarroControl {
     
     
     
-    //
+    //novo combobox que usar arraysCar() para itens
     
     public DefaultComboBoxModel<String> atualizarCar() {
         return new DefaultComboBoxModel<>(arraysCar());
     }
-    //
+    // metodo que vai converter arralist carros para arraylist carros.getmarca()
     
     public String[] arraysCar() {
         List<String> modelo = new ArrayList<>();
@@ -123,7 +128,11 @@ public class EditarEDeletarCarroControl {
         return -1;
     	
     }
- 
+           /*
+            * no caso admin deseja mudar informcaoes metodo vai correr metodos anterios para pegar o arraylist o carro que esta selecionado em combobox e vai 
+            * fzr set text do informacoes atuais do objeto carro
+            */
+    
     	public void EditarInformacoesCar() {
     		String marca = this.buscarCarEscolhido((String)view.getBuscarCarroComboBox().getSelectedItem()).getMarca();
             String cor =this.buscarCarEscolhido((String)view.getBuscarCarroComboBox().getSelectedItem()).getCor();
@@ -141,6 +150,8 @@ public class EditarEDeletarCarroControl {
             
             
     	}
+    	
+    	// metodo que usar o buscarCarEscolhidoIndex() para cahr o index do objeto atual em que estamos trablanho para salvar informcoes
     	public void salvaMudancas() {
     		boolean a;
       		String marca = view.getMarcaFeild().getText();

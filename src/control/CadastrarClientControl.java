@@ -11,13 +11,15 @@ import view.Login;
 
 public class CadastrarClientControl {
 
-	
+
+	//classe responsavel pelo logica atras do view CadastrarClient
+
 	
 	private final CadastrarClient view;
 	public CadastrarClientControl(CadastrarClient view) {
         this.view = view;
     }
-	
+//metodo que vai levar input do usario e vai salva em arrayalist
 	
 	public void cadastrarClient() {
 
@@ -29,7 +31,11 @@ public class CadastrarClientControl {
 
         Dados.getClientes().add(new Client(name, date, cpf, email, password));
     }
-	
+	/*
+	 * getconfirmarbtn vai cadastrarclient e vai leva par a incial login
+	 * se fosse voltar button vai levar para login
+	 * 
+	 */
 	
 	 public void executarBotao(ActionEvent e) {
 	        JButton botao = (JButton) e.getSource();
@@ -44,15 +50,5 @@ public class CadastrarClientControl {
 	            new Login().setVisible(true);
 	        }
 	    }
-	 
-	   public Client pegarModelo() {
 
-	        String name = view.getNameField().getText();
-	        String date = view.getDateField().getText();
-	        String cpf = view.getCpfField().getText();
-	        String email = view.getEmailField().getText();
-	        String password = view.getSenhaField().getText();
-
-	        return new Client(name, date, cpf, email, password);
-	    }
 }

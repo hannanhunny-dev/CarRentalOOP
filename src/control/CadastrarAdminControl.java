@@ -14,13 +14,14 @@ import view.MenuAdmin;
 
 public class CadastrarAdminControl {
 	
-	
+	//classe responsavel pelo logica atras do view CadastrarAdmin
+
 	
 	private final CadastrarAdmin view;
 	public CadastrarAdminControl(CadastrarAdmin view) {
         this.view = view;
     }
-	
+	//metodo que pegar informacoes me textfeild e um metodo
 	public void cadastrarAdmin() {
 
         String name = view.getNameField().getText();
@@ -31,7 +32,11 @@ public class CadastrarAdminControl {
     }
 	
 	
-	
+	/*
+	 * confirmar button que vai salvar novo admin em metood cadastraradmin
+	 * depois vai levar para novo login
+	 * no caso usaurio clicar em back vai levar par menuadmin
+	 */
 	public void executarBotao(ActionEvent e) {
         JButton botao = (JButton) e.getSource();
 
@@ -46,7 +51,7 @@ public class CadastrarAdminControl {
         }
     }
 	
-	
+	//metodo que devolve input do usaurio em forma de object admin
 	   public Admin pegarModelo() {
 
 	        String name = view.getNameField().getText();

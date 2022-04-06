@@ -23,9 +23,11 @@ public class LoginControl {
 	
 	
 	private final Login view;
-	private static  int indextado;
 
 
+/*Classe controller para view Login
+ * tem todos os metodos necessarios para fzr comunicacao entre Modelo de dados e view.Login
+ */
 
     public LoginControl(Login view) {
 
@@ -34,7 +36,12 @@ public class LoginControl {
     
    
 
-
+/*
+ * metodo que vai capturar evento 
+ * 1-botao == view.getLoginBtn() , vai executar metodo validadarUser
+ * 2-botao == view.getAdminBtn() , vai inicaiar novo tela jframe para login do admin
+ * 3-terceiro botao vai levar vc para novo tela para cadaastrar novo usaurio
+ */
 
 	public void executarBotao(ActionEvent e) {
         JButton botao = (JButton) e.getSource();
@@ -52,7 +59,7 @@ public class LoginControl {
     }
     
     
-    
+    //metodo que vai validadar input do usuario para ver se usaurio existe me banco dos dados
     public void validadarUser() {
     	Client c = obterClient();
        
@@ -78,7 +85,7 @@ public class LoginControl {
   
  
     
-    
+    //metodo que vai salvar input do usuario digitada em textfeild do frame
 
 
 	public Client obterClient() {
@@ -96,12 +103,6 @@ public class LoginControl {
   
     
     
-  
-    
-    public Login getView() {
-        return view;
-    }
- 
 
 	
 	

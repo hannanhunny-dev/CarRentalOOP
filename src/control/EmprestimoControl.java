@@ -13,6 +13,7 @@ import view.EmprestimoView;
 
 public class EmprestimoControl {
 	 EmprestimoView view;
+		//classe responsavel pelo logica atras do view EmprestimoView
 
 	public EmprestimoControl(EmprestimoView view) {
 		// TODO Auto-generated constructor stub
@@ -37,7 +38,7 @@ public class EmprestimoControl {
        
     }
 
-	
+	//meteodos que vao salvar informacoes do emprestimo para que empressa pode ver os Carros que estao alugados.
 	
 	
 	public void salvaEmprestimoLocalDeEntrega() {

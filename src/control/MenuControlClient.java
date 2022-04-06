@@ -10,7 +10,10 @@ import view.MenuClient;
 
 public class MenuControlClient {
 	
-	
+
+/*Classe controller para view MenuClient
+ * esse view so tem butoes 
+ */
     private final MenuClient view;
     public MenuControlClient(MenuClient view) {
         super();

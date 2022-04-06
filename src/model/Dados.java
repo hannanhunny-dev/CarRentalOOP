@@ -1,12 +1,16 @@
 package model;
 
 import java.util.ArrayList;
+
+
 import java.util.HashMap;
 import java.util.List;
 
+
+//classe que vai servir como banco de dadaos para applicativo
 public class Dados {
 
-	// classe que vai servir como banco de dadaos para app
+	
 
 	private static final ArrayList<Admin> admins = new ArrayList<>();
 	private static final  ArrayList<Client> clientes = new ArrayList<>();
@@ -17,7 +21,7 @@ public class Dados {
 
 	private Dados() {
 	}
-
+    //nesse meteodo tem informcaoes pre-cadastrados necessarios 
 	public static void start() {
 
 		Admin admin1 = new Admin("admin", "admin");
@@ -70,14 +74,17 @@ public class Dados {
 		return enderecos;
 	}
 
-	// arraylist clientlogado para salvar client que foi logado em caso client vai
-	// querer ver dados deles
+	// arraylist clientlogado para salvar client que foi logado tem principio uso de clonar e usaurio que foi logado para usar futuramente , caso cliente deseja modificar dadaos
 	public static ArrayList<Client> clientesloagado = new ArrayList<>();
+	
+	
+	
 
-	/// metdodo para ver se o input do cliente esta salvo no
+	//@return vai fzr comparacao do entrada do usario para cada cliente em Dados para ver se existe 
+	//@see usando meteudo nomeesenhaIguis entre esse meteodo, esse metodo vai fzr compracao entre duas clientes 
 	public static Client selecionarPorNomeESenha(Client client) {
-		for (Client c : Dados.getClientes()) { // c referindo cada objeto do cliente em array<client>
-			if (nomeESenhaIguaisClient(c, client)) {
+		for (Client c : Dados.getClientes()) { 
+			if (nomeESenhaIguaisClient(c, client)) {                          
 				System.out.print(c);
 				clientesloagado.add(c);
 				return c;
@@ -87,6 +94,7 @@ public class Dados {
 		return null;
 	
 	}
+	
 
 	private static boolean nomeESenhaIguaisClient(Client a, Client b) {
 		return a.getNome().equals(b.getNome()) && a.getSenha().equals(b.getSenha());
@@ -96,8 +104,7 @@ public class Dados {
 		return Dados.getClientes();
 	}
 
-	// //////////// usasndo comparacao para ver o index do Arraylist para
-	// client////////////////////
+//@return vai fzr comparacao do  para ver o index o objeto cliente em arraylist client , metodo necessario para exculir e modificar dados
 	public static int getIndexOfContaLogado() {
 		for (Client c : Dados.clientes) {
 			if (c.getNome().equals(Dados.clientesloagado.get(0).getNome())) {
@@ -111,7 +118,7 @@ public class Dados {
 	}
 
 	////////////////////// ADMIN//////////////////////////////////
-
+//metodos que vao fzr validacao do admin 
 	public static Admin buscarAdmin(Admin admin) {
 		for (Admin a : Dados.getAdmin()) {
 			if (nomeESenhaIguaisAdmin(a, admin)) {
