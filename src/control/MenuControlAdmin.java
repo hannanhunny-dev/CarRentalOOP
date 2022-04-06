@@ -37,8 +37,7 @@ public class MenuControlAdmin {
 			 new VisualizarCarro().setVisible(true);
 			this.view.dispose();
 		} else if (botao == view.getMinhaContaBtn()) {
-			
-			//this.view.dispose();
+			view.indisponivel(" indisponivel no momento");
 		}
 	}
 

@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -94,6 +95,9 @@ public class MenuAdmin extends JFrame implements ActionListener{
 		setLocationRelativeTo(null);
 	}
 	
+	public void indisponivel(String mensagem) {
+		JOptionPane.showMessageDialog(null, mensagem);
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
