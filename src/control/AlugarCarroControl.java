@@ -13,6 +13,7 @@ import model.Dados;
 import view.AdcionarPagamento;
 import view.AlugarCarro;
 import view.EmprestimoView;
+import view.MenuClient;
 
 public class AlugarCarroControl {
 	
@@ -43,6 +44,9 @@ public class AlugarCarroControl {
 		      
 		//	new AdcionarPagamento(dinheiro,text2int).setVisible(true);
 			new EmprestimoView(dinheiro,text2int).setVisible(true);
+			this.view.dispose();
+		}else if (botao== view.getVoltarBtn()) {
+			new MenuClient().setVisible(true);
 			this.view.dispose();
 		}
 		

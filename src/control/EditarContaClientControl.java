@@ -4,6 +4,7 @@ import javax.swing.JButton;
 
 import model.Dados;
 import view.EditarContaClient;
+import view.Login;
 import view.MenuClient;
 import control.LoginControl;
 
@@ -40,7 +41,7 @@ public class EditarContaClientControl  {
            this.view.dispose();
            } 
 	   else if ( botao == view.getVoltarBtn() ){
-        	   new MenuClient().setVisible(true);
+        	   new Login().setVisible(true);
         	   
            }
 }

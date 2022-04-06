@@ -27,6 +27,7 @@ public class MenuControlAdmin {
 			this.view.dispose();
 		} else if (botao == view.getCadastrarCarrosBtn()) {
 			new CadastrarCarro().setVisible(true);
+			this.view.dispose();
 		} else if (botao == view.getAdcionarAdminBtn()) {
 			new CadastrarAdmin().setVisible(true);
 			this.view.dispose();
@@ -39,7 +40,8 @@ public class MenuControlAdmin {
 		} else if (botao == view.getMinhaContaBtn()) {
 			view.indisponivel(" indisponivel no momento");
 		}else if (botao== view.getDeletarCarrosBtn()) {
-			view.indisponivel(" indisponivel no momento");
+			new EditarEDeletarCarro().setVisible(true);
+			 this.view.dispose(); 
 		}
 	}
 
