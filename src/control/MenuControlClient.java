@@ -24,12 +24,14 @@ public class MenuControlClient {
         if (botao == view.getSairBtn()) {
             new Login().setVisible(true);
             this.view.dispose();
-        } else if (botao == view.getVisualizarCarrosBtn()) {
+        } else if (botao == view.getVisualizarCarros()) {
           new AlugarCarro().setVisible(true);
             this.view.dispose();
         } else if (botao == view.getMinhaContaBtn()) {
             new EditarContaClient().setVisible(true);
             this.view.dispose();
+        }else if (botao == view.getAdcionarCnh()) {
+        	view.mensagemCNH("infelizmente adcionar CNH pelo app nao esta disponivel mostre CNH no local de retira do carro");
         }
     }
 

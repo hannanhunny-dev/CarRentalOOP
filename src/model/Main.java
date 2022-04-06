@@ -9,6 +9,7 @@ import view.EditarEDeletarCarro;
 import view.EmprestimoView;
 import view.Login;
 import view.MenuAdmin;
+import view.MenuClient;
 import view.VisualizarCarro;
 
 import java.lang.ModuleLayer.Controller;
@@ -38,7 +39,7 @@ public class Main {
 		new Login().setVisible(true);
 		
 	//	new MenuAdmin().setVisible(true);
-		
+	//	new MenuClient().setVisible(true);
 		//new CadastrarClient().setVisible(true);
 	//	new CadastrarAdmin().setVisible(true);
 	//	new CadastrarCarro().setVisible(true); 

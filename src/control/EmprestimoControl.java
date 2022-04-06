@@ -27,7 +27,7 @@ public class EmprestimoControl {
         	salvaEmprestimoLocalDeEntrega();
         	salvaEmprestimoLocalDeDevolver();
         	new AdcionarPagamento().setVisible(true);
-        	System.out.println(Dados.getEmprestimo().get(0).getAlguel());
+            this.view.dispose();
         	
         	
         	

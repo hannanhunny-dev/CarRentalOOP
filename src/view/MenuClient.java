@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -21,6 +22,8 @@ public class MenuClient extends JFrame implements ActionListener{
 	private final JButton sairBtn;
 	private final MenuControlClient controller;
 	private static final String COLO_STRING = "Open Sans";
+	private final JButton deletarMinhacontaBtn;
+	private final JButton adcionarCnh;
 	
 	
 	
@@ -33,7 +36,7 @@ public class MenuClient extends JFrame implements ActionListener{
 	
 		setTitle("ALugar Carro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 452, 409);
+		setBounds(100, 100, 452, 600);
 
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -53,17 +56,52 @@ public class MenuClient extends JFrame implements ActionListener{
 		contentPane.add(minhaContaBtn);
 
 		sairBtn = new JButton("Sair");
-		sairBtn.setBounds(114, 269, 214, 49);
+		sairBtn.setBounds(114, 500, 214, 49);
 		sairBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
 		sairBtn.addActionListener(this);
 		contentPane.add(sairBtn);
+		
+		
+		deletarMinhacontaBtn = new JButton("Deletar Minha Conta");
+		deletarMinhacontaBtn.setBounds(114, 200, 214, 49);
+		deletarMinhacontaBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		deletarMinhacontaBtn.addActionListener(this);
+		contentPane.add(deletarMinhacontaBtn);
+		
+		
+		
+		adcionarCnh = new JButton("Adcionar CNH");
+		adcionarCnh.setBounds(114, 300, 214, 49);
+		adcionarCnh.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		adcionarCnh.addActionListener(this);
+		contentPane.add(adcionarCnh);
+
 
 		setLocationRelativeTo(null);
+	}
+	
+	public void mensagemCNH(String mensagem) {
+		JOptionPane.showMessageDialog(null, mensagem);
 	}
 	
 	
 	//actions listioner
 	
+public JButton getVisualizarCarros() {
+		return visualizarCarros;
+	}
+
+
+	public JButton getDeletarMinhacontaBtn() {
+		return deletarMinhacontaBtn;
+	}
+
+
+	public JButton getAdcionarCnh() {
+		return adcionarCnh;
+	}
+
+
 public void actionPerformed(ActionEvent e) {
 		
 		this.controller.executarBotao(e);
@@ -74,9 +112,7 @@ public void actionPerformed(ActionEvent e) {
 		return contentPane;
 	}
 
-	public JButton getVisualizarCarrosBtn() {
-		return visualizarCarros;
-	}
+
 
 	public JButton getMinhaContaBtn() {
 		return minhaContaBtn;

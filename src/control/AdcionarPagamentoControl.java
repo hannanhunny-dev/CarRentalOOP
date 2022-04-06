@@ -24,6 +24,9 @@ public class AdcionarPagamentoControl {
 		
 		if(e.getSource()==view.getpagarBtn()) {
 			salvaPagmento();
+			view.ObrigadoMesagen("Pagamento realizado com Sucesso");
+
+			view.ObrigadoMesagen("Obrigado pelo escholher nosso servico");
 			this.view.dispose();
 		}
 		
