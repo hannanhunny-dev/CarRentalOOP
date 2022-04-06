@@ -16,11 +16,12 @@ import control.EmprestimoControl;
 
 public class EmprestimoView extends JFrame implements ActionListener  {
 	
-	
+	/*
+	 * tela responsavel para adcionar imformacoes sobre emprestimo do carro 
+	 */
 	
 	
 
-	private static final String COLO_STRING = null;
 
 	private JPanel panel;
 	
@@ -96,7 +97,7 @@ public class EmprestimoView extends JFrame implements ActionListener  {
 		
 		
 		
-		// infromcaoes pra empresa entrgar o carro
+		// textfeilds no qual endereco  empresa vai entregar carro 
 
 		preco = new JLabel("Endereco  para Receber Carro ");
 		preco.setHorizontalAlignment(SwingConstants.CENTER);
@@ -110,13 +111,13 @@ public class EmprestimoView extends JFrame implements ActionListener  {
 		
 		data = new JLabel("dia de entrega");
 		data.setHorizontalAlignment(SwingConstants.CENTER);
-		data.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		data.setFont(new Font(null, Font.PLAIN, 14));
 		data.setBounds(0, 50, 154, 14);
 		panel.add(data);
 		
 		Endereco = new JLabel("Endereco");
 		Endereco.setHorizontalAlignment(SwingConstants.CENTER);
-		Endereco.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		Endereco.setFont(new Font(null, Font.PLAIN, 14));
 		Endereco.setBounds(0, 100, 154, 14);
 		panel.add(Endereco);
 		
@@ -134,7 +135,7 @@ public class EmprestimoView extends JFrame implements ActionListener  {
 		
 		logradouro = new JLabel("logradouro");
 		logradouro.setHorizontalAlignment(SwingConstants.CENTER);
-		logradouro.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		logradouro.setFont(new Font(null, Font.PLAIN, 14));
 		logradouro.setBounds(0, 250, 154, 14);
 		panel.add(logradouro);
 		
@@ -166,31 +167,31 @@ public class EmprestimoView extends JFrame implements ActionListener  {
 		
 	
 
-		// informcoes para amarmzenar onde usaurio vao devolver carro
+		// informcoes para amarmzenar onde e quando  usaurio vai devolver carro 
 //		
 		
 		enderecodevolta = new JLabel("Endereco para devolver Carro");
 		enderecodevolta.setHorizontalAlignment(SwingConstants.CENTER);
-		enderecodevolta.setFont(new Font(COLO_STRING, Font.PLAIN, 35));
+		enderecodevolta.setFont(new Font(null, Font.PLAIN, 35));
 		enderecodevolta.setBounds(0, 450, 500, 50);
 		panel.add(enderecodevolta);
 		
 		
 		dataDeVolta = new JLabel("data");
 		dataDeVolta.setHorizontalAlignment(SwingConstants.CENTER);
-		dataDeVolta.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		dataDeVolta.setFont(new Font(null, Font.PLAIN, 14));
 		dataDeVolta.setBounds(0, 500, 154, 14);
 		panel.add(dataDeVolta);
 		
 		EnderecoDeVolta = new JLabel("Endereco");
 		EnderecoDeVolta.setHorizontalAlignment(SwingConstants.CENTER);
-		EnderecoDeVolta.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		EnderecoDeVolta.setFont(new Font(null, Font.PLAIN, 14));
 		EnderecoDeVolta.setBounds(0, 550, 154, 14);
 		panel.add(EnderecoDeVolta);
 		
 		logradouroDeVolta = new JLabel("logradouro");
 		logradouroDeVolta.setHorizontalAlignment(SwingConstants.CENTER);
-		logradouroDeVolta.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		logradouroDeVolta.setFont(new Font(null, Font.PLAIN, 14));
 		logradouroDeVolta.setBounds(0, 700, 154, 14);
 		panel.add(logradouroDeVolta);
 		

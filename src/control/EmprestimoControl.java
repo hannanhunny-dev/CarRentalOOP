@@ -38,7 +38,7 @@ public class EmprestimoControl {
        
     }
 
-	//meteodos que vao salvar informacoes do emprestimo para que empressa pode ver os Carros que estao alugados.
+	//meteodos que vao salvar informacoes do emprestimo para que empressa pode ver os informações sobre aluguel
 	
 	
 	public void salvaEmprestimoLocalDeEntrega() {

@@ -23,7 +23,6 @@ import java.awt.Toolkit;
 public class AlugarCarro extends JFrame implements ActionListener{
 	
 	
-	private static final String COLO_STRING = "Open Sans";
 	private final JPanel contentPane;
 	private final JComboBox<String> selecionarCarro;
 	private JTextArea areaText;
@@ -37,7 +36,15 @@ public class AlugarCarro extends JFrame implements ActionListener{
 	private JLabel qtdsDiaslabel;
 	
 	
-	
+	/**
+	 * Tela responsável para o ALugarCArro.
+	 * nesse tela tem  JComboBox para selecionarCarros e jtextfeild para digitar dias par que o cliente esta prescisando de carro
+	 * e dois butoes um de proximo , que ficaria visivel se quando o carro selecionado esta disponivel
+	 * e segundo butao de volar
+	 * nesse tela tem JTextArea para mostrar os carros selecionados 
+	 * 	
+
+ */
 	
 	public AlugarCarro() {
 		controller = new AlugarCarroControl(this);
@@ -56,10 +63,7 @@ public class AlugarCarro extends JFrame implements ActionListener{
 		selecionarCarro.setBounds(20, 22, 300, 22);
 		selecionarCarro.setModel(controller.atualizarCar());
 		contentPane.add(selecionarCarro);
-	//	selecionarCarro.addItem("Selecionar Carro");
-		//selecionarCarro.setSelectedIndex(5);
-		
-		okBtn = new JButton("OK");
+	    okBtn = new JButton("OK");
 		okBtn.setBounds(400, 19, 59, 28);
 		okBtn.addActionListener(this);
 		contentPane.add(okBtn);
@@ -74,7 +78,7 @@ public class AlugarCarro extends JFrame implements ActionListener{
 		
 
 		next = new JButton("Proximo");
-		next.setFont(new Font(COLO_STRING, Font.PLAIN, 13));
+		next.setFont(new Font(null, Font.PLAIN, 13));
 		next.setBounds(54, 353, 124, 43);
 		next.addActionListener(this);
 		next.setVisible(false);
@@ -82,7 +86,7 @@ public class AlugarCarro extends JFrame implements ActionListener{
 
 		voltarBtn = new JButton("Voltar");
 	
-		voltarBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 13));
+		voltarBtn.setFont(new Font(null, Font.PLAIN, 13));
 		voltarBtn.setBounds(300, 353, 124, 43);
 		voltarBtn.addActionListener(this);
 		contentPane.add(voltarBtn);
@@ -96,18 +100,11 @@ public class AlugarCarro extends JFrame implements ActionListener{
 		contentPane.add(qtdsDiasFeild);
 		
 		
-//		preco = new JLabel();
-//		preco.setText("Preco:  "+ controller.getDinheiro() );
-//		preco.setHorizontalAlignment(SwingConstants.CENTER);
-//		preco.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
-//		preco.setBounds(10, 300, 154, 14);
-//		preco.setVisible(false);
-//		contentPane.add(preco);
-		
+
 		
 		qtdsDiaslabel = new JLabel("Escreva dias para alugar");
 		qtdsDiaslabel.setHorizontalAlignment(SwingConstants.CENTER);
-		qtdsDiaslabel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		qtdsDiaslabel.setFont(new Font(null, Font.PLAIN, 14));
 		qtdsDiaslabel.setBounds(10, 300, 200, 30);
 		contentPane.add(qtdsDiaslabel);
 		

@@ -27,9 +27,7 @@ import model.Car;
 import model.Dados;
 
 public class EditarEDeletarCarro extends JFrame implements ActionListener{
-	private static final String COLO_STRING = null;
 	private String[] listaNomes;
-//	private JFrame janela;
 	
 	private JPanel panel;
     private final JTextArea informacoesTable;
@@ -41,7 +39,16 @@ public class EditarEDeletarCarro extends JFrame implements ActionListener{
 	
 	private final EditarEDeletarCarroControl controller;
 
+	/**
+	 * Tela responsável para o EditarEDeletarCarro .
+	 * esse tela tem duas  JComboBox uma para mostra carros e outro para ver disponibilidade do Carro(true or false)
+	 * esse tela tem JTextArea que mostra informmacoes do carro seleciondo em JComboBox
+	 * tem textfeilds para modificao de dados para carro selecionado
+	 * tem butoes para confirmar mudancaas e tmbm tem butao para exculir carro selecionado
+	 
 	
+
+*/
 	private final JTextField marcaFeild;
 	private final JTextField corFeild;
 	private final JTextField modeloFeild;
@@ -56,7 +63,6 @@ public class EditarEDeletarCarro extends JFrame implements ActionListener{
 		
 		controller = new EditarEDeletarCarroControl(this);
 		
-		//parte modificar dadaos//
 		setResizable(false);
 		setTitle("Cadastro de Carro");
 		this.setSize(750, 750);
@@ -70,31 +76,31 @@ public class EditarEDeletarCarro extends JFrame implements ActionListener{
            
         JLabel marca = new JLabel("marca");
 		marca.setHorizontalAlignment(SwingConstants.CENTER);
-		marca.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		marca.setFont(new Font(null, Font.PLAIN, 14));
 		marca.setBounds(0, 400, 150, 14);
 		panel.add(marca);
 
 		JLabel cor = new JLabel("cor");
 		cor.setHorizontalAlignment(SwingConstants.CENTER);
-		cor.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		cor.setFont(new Font(null, Font.PLAIN, 14));
 		cor.setBounds(0, 440, 154, 14);
 		panel.add(cor);
 
 		JLabel modelo = new JLabel("modelo");
 		modelo.setHorizontalAlignment(SwingConstants.CENTER);
-		modelo.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		modelo.setFont(new Font(null, Font.PLAIN, 14));
 		modelo.setBounds(0, 480, 154, 14);
 		panel.add(modelo);
 
 		JLabel anoDeFAbricacao = new JLabel("anoDeFAbricacao");
 		anoDeFAbricacao.setHorizontalAlignment(SwingConstants.CENTER);
-		anoDeFAbricacao.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		anoDeFAbricacao.setFont(new Font(null, Font.PLAIN, 14));
 		anoDeFAbricacao.setBounds(0, 520, 154, 14);
 		panel.add(anoDeFAbricacao);
 
 		JLabel dispoivel = new JLabel("Disponivel");
 		dispoivel.setHorizontalAlignment(SwingConstants.CENTER);
-		dispoivel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		dispoivel.setFont(new Font(null, Font.PLAIN, 14));
 		dispoivel.setBounds(0, 560, 154, 14);
 		panel.add(dispoivel);
 

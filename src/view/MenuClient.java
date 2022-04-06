@@ -21,10 +21,12 @@ public class MenuClient extends JFrame implements ActionListener{
 	private final JButton minhaContaBtn;
 	private final JButton sairBtn;
 	private final MenuControlClient controller;
-	private static final String COLO_STRING = "Open Sans";
 	private final JButton deletarMinhacontaBtn;
 	private final JButton adcionarCnh;
-	
+	/* classe herda JFrame e implementar actionlsiitoner
+	   * classe responsavel pelo tela do MenuClient
+	   * nesse tela so tem butoes que vao levar para tela desejada quando sao clicado .
+	   */
 	
 	
 	
@@ -45,26 +47,26 @@ public class MenuClient extends JFrame implements ActionListener{
 
 		visualizarCarros = new JButton("Alugar Carro");
 		visualizarCarros.setBounds(114, 38, 214, 49);
-		visualizarCarros.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		visualizarCarros.setFont(new Font(null, Font.PLAIN, 14));
 		visualizarCarros.addActionListener(this);
 		contentPane.add(visualizarCarros);
 
 		minhaContaBtn = new JButton("Editar conta");
 		minhaContaBtn.setBounds(114, 115, 214, 49);
-		minhaContaBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		minhaContaBtn.setFont(new Font(null, Font.PLAIN, 14));
 		minhaContaBtn.addActionListener(this);
 		contentPane.add(minhaContaBtn);
 
 		sairBtn = new JButton("Sair");
 		sairBtn.setBounds(114, 500, 214, 49);
-		sairBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		sairBtn.setFont(new Font(null, Font.PLAIN, 14));
 		sairBtn.addActionListener(this);
 		contentPane.add(sairBtn);
 		
 		
 		deletarMinhacontaBtn = new JButton("Deletar Minha Conta");
 		deletarMinhacontaBtn.setBounds(114, 200, 214, 49);
-		deletarMinhacontaBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		deletarMinhacontaBtn.setFont(new Font(null, Font.PLAIN, 14));
 		deletarMinhacontaBtn.addActionListener(this);
 		contentPane.add(deletarMinhacontaBtn);
 		
@@ -72,7 +74,7 @@ public class MenuClient extends JFrame implements ActionListener{
 		
 		adcionarCnh = new JButton("Adcionar CNH");
 		adcionarCnh.setBounds(114, 300, 214, 49);
-		adcionarCnh.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		adcionarCnh.setFont(new Font(null, Font.PLAIN, 14));
 		adcionarCnh.addActionListener(this);
 		contentPane.add(adcionarCnh);
 

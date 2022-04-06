@@ -19,7 +19,7 @@ public class CadastrarClientControl {
 	public CadastrarClientControl(CadastrarClient view) {
         this.view = view;
     }
-//metodo que vai levar input do usario e vai salva em arrayalist
+//metodo que vai pegar input do usario e vai salva em dados
 	
 	public void cadastrarClient() {
 
@@ -32,8 +32,8 @@ public class CadastrarClientControl {
         Dados.getClientes().add(new Client(name, date, cpf, email, password));
     }
 	/*
-	 * getconfirmarbtn vai cadastrarclient e vai leva par a incial login
-	 * se fosse voltar button vai levar para login
+	 * getconfirmarbtn vai cadastrarclient e vai leva par a tela  login
+	 * se  voltar button e clicado vai levar para  new login
 	 * 
 	 */
 	

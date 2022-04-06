@@ -21,7 +21,7 @@ public class CadastrarAdminControl {
 	public CadastrarAdminControl(CadastrarAdmin view) {
         this.view = view;
     }
-	//metodo que pegar informacoes me textfeild e um metodo
+	//metodo que pegar informacoes me textfeild do jframe para adcionar em dados
 	public void cadastrarAdmin() {
 
         String name = view.getNameField().getText();
@@ -33,7 +33,7 @@ public class CadastrarAdminControl {
 	
 	
 	/*
-	 * confirmar button que vai salvar novo admin em metood cadastraradmin
+	 * confirmar button  vai salvar novo admin em dadaos
 	 * depois vai levar para novo login
 	 * no caso usaurio clicar em back vai levar par menuadmin
 	 */

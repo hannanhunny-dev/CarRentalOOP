@@ -17,13 +17,13 @@ public class CadastrarCarroControl {
 	
 
 	private final CadastrarCarro view;
-	//private CadastrarCarro view;
+	
 	
 	public CadastrarCarroControl(CadastrarCarro view) {
        this.view = view;
     }
 /*
- * metodo cadastrar carro que vai cadastrar novo carro em dados.cars
+ * metodo cadastrar carro que vai cadastrar novo carro pegando gettext do textfeild em dados
  */
 	 public void cadastrarCarro() {
 
@@ -42,8 +42,8 @@ public class CadastrarCarroControl {
 	        System.out.print(a);
 	    }
 	/*
-	 *  getAdcionarCarroBtn vai correr metodo cadastrarCarro que vai salvar o car em arraylist e vai levar para menuadmin
-	 *  se usuario clicar me voltar vai levar para menuadmin
+	 *  getAdcionarCarroBtn vai devolver metodo cadastrarCarro que vai salvar o car em arraylist e vai levar para tela menuadmin
+	 *  se usuario clicar me voltar vai voltar para menuadmin
 	 */
 	  public void executarBotao(ActionEvent e) {
 	        JButton botao = (JButton) e.getSource();

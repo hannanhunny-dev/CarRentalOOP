@@ -28,7 +28,10 @@ public class VisualizarCarro extends JFrame implements ActionListener {
 		  
 		  String col[] = {"marca","cor","modelo","anoDeFabricacao","disponivel"};
 
-		  
+		  /* tela jframe que esta usando jtable pra mostrar informacoes que tem em dadaos
+		   * usando forloop para adcionar objetos carros do arraylist para jtable
+		   * 
+		   */
 		  DefaultTableModel tableModel = new DefaultTableModel(col, 0);
 		  table = new JTable(tableModel);
 		  header = table.getTableHeader();

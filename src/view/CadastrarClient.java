@@ -33,9 +33,12 @@ public class CadastrarClient extends JFrame implements ActionListener {
 	private final JButton confirmarBtn;
 	private final JButton voltarBtn;
 	private final CadastrarClientControl controller;
-	private static final String COLO_STRING = "Open Sans";
 	
-	
+	/**
+	 * Tela responsável para o cadastro de novo Client .
+	 * classe extends jframe e implmentar interface actionlistioner
+	 * 
+ */
 	
 	public CadastrarClient() {
 		controller = new CadastrarClientControl(this);
@@ -51,32 +54,32 @@ public class CadastrarClient extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 
 		nameLabel = new JLabel("Nome");
-		nameLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 40));
+		nameLabel.setFont(new Font(null, Font.PLAIN, 40));
 		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		nameLabel.setBounds(30, 11, 152, 35);
 		contentPane.add(nameLabel);
 
 		dateLabel = new JLabel("Data de nascimento");
 		dateLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		dateLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
+		dateLabel.setFont(new Font(null, Font.PLAIN, 20));
 		dateLabel.setBounds(0, 100, 250, 35);
 		contentPane.add(dateLabel);
 
 		cpfLabel = new JLabel("CPF");
 		cpfLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		cpfLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 40));
+		cpfLabel.setFont(new Font(null, Font.PLAIN, 40));
 		cpfLabel.setBounds(30, 200, 152, 35);
 		contentPane.add(cpfLabel);
 
 		emailLabel = new JLabel("Email");
 		emailLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		emailLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 40));
+		emailLabel.setFont(new Font(null, Font.PLAIN, 40));
 		emailLabel.setBounds(33, 300, 152, 35);
 		contentPane.add(emailLabel);
 
 		senhaLabel = new JLabel("Senha");
 		senhaLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		senhaLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 40));
+		senhaLabel.setFont(new Font(null, Font.PLAIN, 40));
 		senhaLabel.setBounds(33, 390, 152, 35);
 		contentPane.add(senhaLabel);
 
@@ -122,7 +125,11 @@ public class CadastrarClient extends JFrame implements ActionListener {
 	
 	
 	
-	
+	 /**
+     * executa um comando dependendo de qual botão foi clicado.
+     * 
+     * implementacao da interface ActionListener.
+     */
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

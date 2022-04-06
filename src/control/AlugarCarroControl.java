@@ -25,9 +25,10 @@ public class AlugarCarroControl {
 		this.view = view;
 	}
 	/*
-	 * se usaurio clicar em butao ok sistema vai mostra detalhes do carro selecionado em combobox
-	 * se carro fosse disponivel esta disponivel, o sistema vai visibilizar button para comprar carro
-	 * @param no caso usaurio selecionar carro sistema vai levar para novo tela com EmprestimoView com de dinheiro e dias para que usaurio esta querendo
+	 * se usaurio clicar em butao ok sistema vai mostra detalhes do carro que ta selecionado em combobox
+	 * se carro  esta disponivel, o sistema vai visibilizar button "proximo" para alugar carro
+	 * @param no caso usaurio selecionar carro sistema vai levar para novo tela com EmprestimoView com o argumentos "dinheiro" e "dias"
+	 *  
 	 */
 	
 	
@@ -68,7 +69,7 @@ public class AlugarCarroControl {
 	    }
 	    
 	    
-	    //se o carro fosse escolhido vai devolver o informacoes salvados nos dados
+	    //se o carro foi escolhido em jcombobox vai devolver o objeto carro  salvado no arraylist de  dados
 	    public Car buscarCarEscolhido(String name) {
 	        for (Car c : Dados.getCars()) {
 	            if (c.getMarca().equals(name)) {
@@ -79,7 +80,7 @@ public class AlugarCarroControl {
 	        return null;
 	    }
 	    
-	    //metodo vai verficao de se carro esta disponivel para alugamento
+	    //metodo vai fzr verficao  se carro esta disponivel para emprestar ou nao
 	    public boolean buscarCarEscolhidoDisponivel(String name) {
 	        for (Car c : Dados.getCars()) {
 	            if (c.getMarca().equals(name)) {
@@ -92,7 +93,7 @@ public class AlugarCarroControl {
 	    }
 	    
 	    
-	    //metodo que ta usando metodo buscarCarEscolhidoDisponivel dentro dele para verificao se carro esta disponivel
+	    //metodo que ta usando metodo buscarCarEscolhidoDisponivel dentro dele para verificao se carro esta disponivel para ativar o proximo button
 	    public void checkAvailability() {
 	    	if(buscarCarEscolhidoDisponivel((String)view.getSelecionarCarro().getSelectedItem()) == true){
 	    		view.getProximo().setVisible(true);
@@ -105,12 +106,12 @@ public class AlugarCarroControl {
 	    
 	    
 	    //
-	    // marca em objeto car do arraylist para array e depois esse array para combobox 
+	    // string do arraysCar()  para combobox
 	    public DefaultComboBoxModel<String> atualizarCar() {
 	        return new DefaultComboBoxModel<>(arraysCar());
 	    }
 	    //
-	    
+	    //list com Dados.getCars().getMarca() como string de todos os objetos car
 	    public String[] arraysCar() {
 	        List<String> modelo = new ArrayList<>();
 
@@ -129,9 +130,6 @@ public class AlugarCarroControl {
    }
    
    
-   
-   
-  //  private int text2int = Integer.parseInt(view.getQtdsDiasFeild().getText());
 
 	 public int getText2int() {
 		 return text2int;

@@ -38,7 +38,8 @@ public class EditarContaClientControl  {
 	
 }
 	  
-	   //meteodos que vai modificar dados do usario
+	   //meteodos que vao modificar dados do usario
+	  //view.getA() e o posicao do meuobjeto em arraylist que esta no view EditarContaClient
 	   public void editarConta() {
 		   String name = view.getNameField().getText();
           String date = view.getDateField().getText();

@@ -29,8 +29,10 @@ public class CadastrarAdmin extends JFrame implements ActionListener {
 	private final JButton confirmarBtn;
 	private final JButton voltarBtn;
 	private final CadastrarAdminControl controller;
-	private static final String COLO_STRING = "Open Sans";
-	
+	/**
+	 * Tela responsável para o cadastro de novo admin .
+	 * tem dois textfeild para nome e senha e dois butoes confirmarBtn,voltarBtn 
+ */
 	
 	public CadastrarAdmin() {
 		controller = new CadastrarAdminControl(this);
@@ -46,14 +48,14 @@ public class CadastrarAdmin extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 		
 		nameLabel = new JLabel("Nome");
-		nameLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 50));
+		nameLabel.setFont(new Font(null, Font.PLAIN, 50));
 		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		nameLabel.setBounds(30, 20, 152, 40);
 		contentPane.add(nameLabel);
 		
 		senhaLabel = new JLabel("Senha");
 		senhaLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		senhaLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 50));
+		senhaLabel.setFont(new Font(null, Font.PLAIN, 50));
 		senhaLabel.setBounds(30, 110, 152, 40);
 		contentPane.add(senhaLabel);
 		

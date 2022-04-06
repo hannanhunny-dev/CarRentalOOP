@@ -37,9 +37,14 @@ public class EditarContaClient extends JFrame implements ActionListener {
  	private final JButton confirmarBtn;
  	private final JButton voltarBtn;
  	private int a = Dados.getIndexOfContaLogado(); 
- 	private static final String COLO_STRING = "Open Sans";
  
-	
+ 	/**
+	 * Tela responsável para o editar conta do cliente logado.
+	 * classe usando dados.getIndexOfContaLogado  em modelo.Dados que retorne posicao do objeto cliente atual em nosso arraylist
+	 * usando esses informacoes estou editando informacoes do cliente logado 
+	 *  
+
+ */
 	
 		public  EditarContaClient() {
 			
@@ -58,32 +63,32 @@ public class EditarContaClient extends JFrame implements ActionListener {
 			contentPane.setLayout(null);
 
 			nameLabel = new JLabel("Nome");
-			nameLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+			nameLabel.setFont(new Font(null, Font.PLAIN, 14));
 			nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
 			nameLabel.setBounds(30, 11, 152, 35);
 			contentPane.add(nameLabel);
 
 			dateLabel = new JLabel("Data de nascimento");
 			dateLabel.setHorizontalAlignment(SwingConstants.CENTER);
-			dateLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+			dateLabel.setFont(new Font(null, Font.PLAIN, 14));
 			dateLabel.setBounds(30, 57, 152, 35);
 			contentPane.add(dateLabel);
 
 			cpfLabel = new JLabel("CPF");
 			cpfLabel.setHorizontalAlignment(SwingConstants.CENTER);
-			cpfLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+			cpfLabel.setFont(new Font(null, Font.PLAIN, 14));
 			cpfLabel.setBounds(30, 103, 152, 35);
 			contentPane.add(cpfLabel);
 
 			emailLabel = new JLabel("Email");
 			emailLabel.setHorizontalAlignment(SwingConstants.CENTER);
-			emailLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+			emailLabel.setFont(new Font(null, Font.PLAIN, 14));
 			emailLabel.setBounds(33, 149, 152, 35);
 			contentPane.add(emailLabel);
 
 			senhaLabel = new JLabel("Senha");
 			senhaLabel.setHorizontalAlignment(SwingConstants.CENTER);
-			senhaLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+			senhaLabel.setFont(new Font(null, Font.PLAIN, 14));
 			senhaLabel.setBounds(33, 198, 152, 35);
 			contentPane.add(senhaLabel);
 

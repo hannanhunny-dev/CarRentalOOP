@@ -31,16 +31,12 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 
 	/**
 	 * Tela responsável para o cadastro de pagamento.
-	 
-
-	 * JPanel também cria diversos JLabels para inserir os dados e cadastrar
 	 * o Pagamento. Além disso, também apresenta três botões, são eles:
 	 * 		(1) -> depois adcionar dados de Eemprestimo sistema leva o usario para fzr pagamento pelo app cartao de credito
-	 * 		(3) -> botão Confirmar: retorna uma mensagem confirmando 
+	 * 		(2) -> botão Confirmar: retorna uma mensagem confirmando 
 
  */
 	
-	private static final String COLO_STRING = "Open Sans";
 
 	private AdcionarPagamentoControl controller;
 	
@@ -59,12 +55,12 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 		
 		CartaoDeCredito = new JLabel(" Adcionar Cartao de Credito");
-		CartaoDeCredito.setFont(new Font(COLO_STRING, Font.PLAIN, 27));
+		CartaoDeCredito.setFont(new Font(null, Font.PLAIN, 27));
 		CartaoDeCredito.setBounds(70, 70, 350, 50);
 		contentPane.add(CartaoDeCredito);
 		
 		nomeImpresso = new JLabel("Nome Impresso");
-		nomeImpresso.setFont(new Font(COLO_STRING, Font.PLAIN, 16));
+		nomeImpresso.setFont(new Font(null, Font.PLAIN, 16));
 		nomeImpresso.setBounds(10, 70+100, 151, 21);
 		contentPane.add(nomeImpresso);
 		
@@ -75,7 +71,7 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 		
 		
 		dataDevalidacao = new JLabel("data De validacao");
-		dataDevalidacao.setFont(new Font(COLO_STRING, Font.PLAIN, 16));
+		dataDevalidacao.setFont(new Font(null, Font.PLAIN, 16));
 		dataDevalidacao.setBounds(10, 210+100, 151, 21);
 		contentPane.add(dataDevalidacao);
 		
@@ -88,7 +84,7 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 		
 		
 		codigoDeSeguranca = new JLabel("codigo De Seguranca");
-		codigoDeSeguranca.setFont(new Font(COLO_STRING, Font.PLAIN, 16));
+		codigoDeSeguranca.setFont(new Font(null, Font.PLAIN, 16));
 		codigoDeSeguranca.setBounds(10, 170+100, 151, 21);
 		contentPane.add(codigoDeSeguranca);
 		
@@ -99,7 +95,7 @@ public class AdcionarPagamento extends JFrame implements ActionListener {
 		
 		
 		nomeroDoCartao = new JLabel("nomeroDoCartao");
-		nomeroDoCartao.setFont(new Font(COLO_STRING, Font.PLAIN, 16));
+		nomeroDoCartao.setFont(new Font(null, Font.PLAIN, 16));
 		nomeroDoCartao.setBounds(10, 120+100, 151, 21);
 		contentPane.add(nomeroDoCartao);
 		

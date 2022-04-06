@@ -40,9 +40,13 @@ public class CadastrarCarro extends JFrame implements ActionListener {
 	private final JPanel contentPane;
 	private final JButton voltarBtn;
 	private final JButton adcionarCarroBtn;
-	private static final String COLO_STRING = "Open Sans";
 	private final JComboBox<Object> disponiveComboBox;
-
+	/**
+	 * Tela responsável para o cadastro de novo Carro.
+	*admin vai adcionar dados de novo carros para salvar em dados
+	*tem comobobox com boolean para selecionar o disponibilidade de carro
+	
+ */
 	
 	
 	
@@ -61,31 +65,31 @@ public class CadastrarCarro extends JFrame implements ActionListener {
 
 		marca = new JLabel("marca");
 		marca.setHorizontalAlignment(SwingConstants.CENTER);
-		marca.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		marca.setFont(new Font(null, Font.PLAIN, 14));
 		marca.setBounds(10, 31, 154, 14);
 		contentPane.add(marca);
 
 		cor = new JLabel("cor");
 		cor.setHorizontalAlignment(SwingConstants.CENTER);
-		cor.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		cor.setFont(new Font(null, Font.PLAIN, 14));
 		cor.setBounds(10, 72, 154, 14);
 		contentPane.add(cor);
 
 		modelo = new JLabel("modelo");
 		modelo.setHorizontalAlignment(SwingConstants.CENTER);
-		modelo.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		modelo.setFont(new Font(null, Font.PLAIN, 14));
 		modelo.setBounds(10, 112, 154, 14);
 		contentPane.add(modelo);
 
 		anoDeFAbricacao = new JLabel("anoDeFAbricacao");
 		anoDeFAbricacao.setHorizontalAlignment(SwingConstants.CENTER);
-		anoDeFAbricacao.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		anoDeFAbricacao.setFont(new Font(null, Font.PLAIN, 14));
 		anoDeFAbricacao.setBounds(10, 151, 154, 14);
 		contentPane.add(anoDeFAbricacao);
 
 		dispoivel = new JLabel("Disponivel");
 		dispoivel.setHorizontalAlignment(SwingConstants.CENTER);
-		dispoivel.setFont(new Font(COLO_STRING, Font.PLAIN, 14));
+		dispoivel.setFont(new Font(null, Font.PLAIN, 14));
 		dispoivel.setBounds(10, 193, 154, 14);
 		contentPane.add(dispoivel);
 
@@ -114,22 +118,6 @@ public class CadastrarCarro extends JFrame implements ActionListener {
 		contentPane.add(anoDeFAbricacaoFeild);
 		
 		
-		
-		
-//		sim = new JRadioButton("sim");
-//		
-//		sim.setBounds(200, 188, 50, 50);
-//		contentPane.add(sim);
-//		nao =  new JRadioButton("nao");
-//		nao.setBounds(300, 188, 50, 50);
-//		contentPane.add(nao);
-//		
-//		
-//		ButtonGroup group = new ButtonGroup();
-//		group.add(sim);
-//	    group.add(nao);
-		
-	
 		
 		
 		disponiveComboBox = new JComboBox<>();

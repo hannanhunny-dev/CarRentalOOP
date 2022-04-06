@@ -34,7 +34,6 @@ public class  LoginAdmin extends JFrame implements ActionListener {
 
 	private final LoginControlAdmin controller;
 	private final JButton clientBtn;
-	private static final String COLO_STRING = "Open Sans";
 	
 	 /* classe herda JFrame e implementar actionlsiitoner
 	   * classe responsavel pelo tela do login Admin
@@ -53,7 +52,7 @@ public class  LoginAdmin extends JFrame implements ActionListener {
 
 		usernameJLabel = new JLabel("Usuario");
 		usernameJLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		usernameJLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 30));
+		usernameJLabel.setFont(new Font(null, Font.PLAIN, 30));
 		usernameJLabel.setBounds(10, 83, 143, 25);
 		getContentPane().add(usernameJLabel);
 
@@ -63,7 +62,7 @@ public class  LoginAdmin extends JFrame implements ActionListener {
 
 		passwrodJLabel = new JLabel("Senha");
 		passwrodJLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		passwrodJLabel.setFont(new Font(COLO_STRING, Font.PLAIN, 30));
+		passwrodJLabel.setFont(new Font(null, Font.PLAIN, 30));
 		passwrodJLabel.setBounds(10, 119, 143, 25);
 		getContentPane().add(passwrodJLabel);
 
@@ -72,13 +71,13 @@ public class  LoginAdmin extends JFrame implements ActionListener {
 		getContentPane().add(password);
 
 		loginBtn = new JButton("Entrar");
-		loginBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 30));
+		loginBtn.setFont(new Font(null, Font.PLAIN, 30));
 		loginBtn.setBounds(69, 172, 155, 50);
 		loginBtn.addActionListener(this);
 		getContentPane().add(loginBtn);
 
 		clientBtn = new JButton("Login-Cliente");
-		clientBtn.setFont(new Font(COLO_STRING, Font.PLAIN, 20));
+		clientBtn.setFont(new Font(null, Font.PLAIN, 20));
 		clientBtn.setBounds(215, 12, 150, 40);
 		clientBtn.addActionListener(this);
 		getContentPane().add(clientBtn);

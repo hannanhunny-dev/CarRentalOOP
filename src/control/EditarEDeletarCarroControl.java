@@ -24,8 +24,9 @@ public class EditarEDeletarCarroControl {
         this.view = view;
     }
 
-   /*esse controller tem metodos que vao  pegar Marca do carro para mostrar em combobox no caso selecionado eles vao mostra objeto carro daquele marca 
-    * assim admin pode fzr operacoes crud nos carros.
+   /*esse controller tem metodos que vao  filtrar Marca do carro para mostrar em combobox no caso esse se e selecionado em combobox
+    *  eles vao mostra objeto carro daquele marca assim admin pode fzr operacoes crud nos carros.
+    * 
     * 
     * 
     */
@@ -57,7 +58,7 @@ public class EditarEDeletarCarroControl {
         
     }	
 
-    // metodo que pegar o marca do carro e vai exculir aquele carro
+    // metodo que pegar o marca do carro e vai exculir o carro dos dados
     
     public boolean excluirCarro(String name) {
         for (Car c : Dados.getCars()) {
@@ -71,7 +72,7 @@ public class EditarEDeletarCarroControl {
         return false;
     }
     
-    //metodo boolean que vai fzr compracao entres string marca e car.getmarca() para ver se tem em dados
+    //metodo boolean que vai fzr compracao entres string marca e car.getmarca() para ver se ele esta em dados
     private boolean saoIguais(String marca) {
         for (Car c : Dados.getCars()) {
             if (c.getMarca().equals(marca)) {
@@ -101,7 +102,7 @@ public class EditarEDeletarCarroControl {
     public DefaultComboBoxModel<String> atualizarCar() {
         return new DefaultComboBoxModel<>(arraysCar());
     }
-    // metodo que vai converter arralist carros para arraylist carros.getmarca()
+    // metodo que vai converter arraylist carros para arraylist carros.getmarca()
     
     public String[] arraysCar() {
         List<String> modelo = new ArrayList<>();
