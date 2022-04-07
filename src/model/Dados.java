@@ -43,6 +43,7 @@ public class Dados {
 		Car car2 = new Car("Bmw ", "black", "M3", "2015", true);
 		Car car3 = new Car("Lexus ", "orange", "ES350", "2020", false);
 		Car car4 = new Car("Chevrolet ", "white", "chevy", "2018", true);
+		Car car5 = new Car("Mercecdes ", "white", "i5", "2000", true);
 		cars.add(car1);
 		cars.add(car2);
 		cars.add(car3);
