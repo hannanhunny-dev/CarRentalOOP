@@ -76,7 +76,7 @@ public class MenuAdmin extends JFrame implements ActionListener{
 		visualizarCarrosBtn.addActionListener(this);
 		contentPane.add(visualizarCarrosBtn);
 
-		minhaContaBtn = new JButton("Minha conta");
+		minhaContaBtn = new JButton("Emprestimos");
 		minhaContaBtn.setBounds(10, 410,770,80);
 		minhaContaBtn.setFont(new Font(null, Font.PLAIN, 60));
 		minhaContaBtn.addActionListener(this);

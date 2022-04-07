@@ -59,8 +59,11 @@ public class Car {
 	
 	
     public String toString() {
-        return "Car: "+ "\n"+
-        		"marca :  "+ getMarca() + "\n"+
+        return "Car: "+ "\n"
+                +"Modelo :"+ getModelo() + "\n"+
+        		"\n"+
+    
+        		"Marca :  "+ getMarca() + "\n"+
 	             "\n"+
 	            "Cor  :  " + getCor() + "\n"
 	            +"\n"+

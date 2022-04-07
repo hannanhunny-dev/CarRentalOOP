@@ -27,11 +27,11 @@ public class Dados {
 		Admin admin1 = new Admin("admin", "admin");
 		admins.add(admin1);
 
-		Client client1 = new Client("h", "bfdsf", "bfd", "v", "h");
-		Client client2 = new Client("adfds", "b", "bfgfd", "dfgv", "cdgf");
-		Client client3 = new Client("basic", "b", "dfgb", "dfgv", "basic");
-		Client client4 = new Client("pillow", "b", "gdfgb", "fdgv", "dfgc");
-		Client client5 = new Client("gown", "b", "bgdf", "dgfv", "cdfg");
+		Client client1 = new Client("hannan", "13/10/2005", "705 066 005 48", "hannanhunny@gmail.com", "hannan");
+		Client client2 = new Client("helloworld", "10/5/1950", "343 3434 345 44", "hello@hello.com", "helloworld");
+		Client client3 = new Client("h", "05/5/2001", "3434 344 3434", "hello@gmail.com", "h");
+		Client client4 = new Client("kittylover", "01/01/1901", "4324423432", "blabla@gmail.com", "kittylover");
+		Client client5 = new Client("a", "07/07", "34534534534", "iAmAwesome@gmail.com", "a");
 
 		clientes.add(client1);
 		clientes.add(client2);
@@ -39,10 +39,10 @@ public class Dados {
 		clientes.add(client4);
 		clientes.add(client5);
 
-		Car car1 = new Car("any", "random", "good", "sds", true);
-		Car car2 = new Car("gfg", "gfgfg", "fgfg", "dfdf", true);
-		Car car3 = new Car("gfgf", "jhj", "ghf", "fgfdg", false);
-		Car car4 = new Car("fgdfg", "rt5gf", "fgfg", "gfgf", true);
+		Car car1 = new Car("HONDA", "blue", "CR80R", "2001", true);
+		Car car2 = new Car("Bmw ", "black", "M3", "2015", true);
+		Car car3 = new Car("Lexus ", "orange", "ES350", "2020", false);
+		Car car4 = new Car("Chevrolet ", "white", "chevy", "2018", true);
 		cars.add(car1);
 		cars.add(car2);
 		cars.add(car3);

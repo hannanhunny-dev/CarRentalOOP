@@ -4,7 +4,7 @@ package model;
 public class Emprestimo {
 	
 	private String date;
-	private  Endereco endereco;
+	private Endereco endereco;
 	private int alguel;
 	private boolean EntregarOuDevolver;
 	
